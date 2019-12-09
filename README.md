@@ -75,8 +75,16 @@ I have included 3 sets of files in this repo:
    compiled Autohotkey program with F1-F5. It also lets you `Suspend` and `Pause`
    the program to show that you only need to replace the icons in the executable for
    them to be used; no other changes to the program logic are necessary.
-2. **icons\** is a folder that contains .ico icons that will be used in the exercise.
+2. **icons\\** is a folder that contains .ico icons that will be used in the exercise.
 3. **compile.bat** is a batch file used to compile the above script. It creates two
    copies:
    - **icon_test.exe** is the raw compiled executable with default icons.
    - **icon_test_edited.exe** is the same executable edited to have all new icons.
+
+
+## Troubleshooting
+
+### Your executable's main icon doesn't update properly in Windows Explorer
+
+This is caused by Windows not properly updating its icon cache. You'll need to
+[force Windows to do it manually](https://superuser.com/a/499079/1119763).
