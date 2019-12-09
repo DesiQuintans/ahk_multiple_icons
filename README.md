@@ -59,11 +59,11 @@ add new icons and use them whenever you like. Add them to the executable with
 Then access them in your program logic: 
 
 ```
-Menu, Tray, Icon, %A_ScriptFullPath%, -159
+Menu, Tray, Icon, %A_ScriptFullPath%, -300
 ```
 
 By offering `%A_ScriptFullPath%` as the FileName and **a negative integer** as
-the IconNumber, you are telling Autohotkey that you want IconNumber 159 inside
+the IconNumber, you are telling Autohotkey that you want IconNumber 300 inside
 the currently-running executable.
 
 
