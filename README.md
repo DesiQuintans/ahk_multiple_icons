@@ -45,6 +45,28 @@ icon, use:
 ```
 
 
+## Using custom icons in a program
+
+Aside from changing the default icons used in your compiled program, you can also
+add new icons and use them whenever you like. Add them to the executable with
+**ResHacker** under a new numeric name, e.g. `300` or greater:
+
+```
+"path\to\ResourceHacker.exe" -open my_executable.exe -save my_executable.exe 
+    -action addoverwrite -resource "my_icon.ico" -mask ICONGROUP,300,
+```
+
+Then access them in your program logic: 
+
+```
+Menu, Tray, Icon, %A_ScriptFullPath%, -159
+```
+
+By offering `%A_ScriptFullPath%` as the FileName and **a negative integer** as
+the IconNumber, you are telling Autohotkey that you want IconNumber 159 inside
+the currently-running executable.
+
+
 ## A worked example
 
 I have included 3 sets of files in this repo:
