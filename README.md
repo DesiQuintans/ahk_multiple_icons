@@ -7,13 +7,15 @@ You will need:
 
 1. Ahk2Exe (comes with [Autohotkey](https://www.autohotkey.com/))
 2. [Resource Hacker](http://www.angusj.com/resourcehacker/) AKA ResHacker.
-3. Icons in .ico format (this is the most convenient format).
+3. Icons in .ico format (this is the most convenient format). I used [John
+   Sorrentino's Emoji Favicons](https://favicon.io/emoji-favicons/) site
+   for the examples used in this article.
 
 
 ## Replacing only the main icon
 
-This one is simple; you simply need to offer the new icon in the **Ahk2Exe**. 
-You can also do it in the command line:
+This one is simple; you simply need to offer the new icon in the **Ahk2Exe**
+GUI. You can also do it in the command line:
 
 ```
 "path\to\Ahk2Exe.exe" /in "my_script.ahk" /icon "my_icon.ico"
@@ -38,7 +40,7 @@ or it can be done in the command line. For example, to replace **206** with a ne
 icon, use:
 
 ```
-"path\to\ResourceHacker.exe" -open my_script.exe -save my_script.exe 
+"path\to\ResourceHacker.exe" -open my_executable.exe -save my_executable.exe 
     -action addoverwrite -resource "my_icon.ico" -mask ICONGROUP,206,
 ```
 
@@ -49,8 +51,8 @@ I have included 3 sets of files in this repo:
 
 1. **icon_test.ahk** is a program that lets you cycle through the default icons in a
    compiled Autohotkey program with F1-F5. It also lets you `Suspend` and `Pause`
-   the program to show that you only need to replace the icons in the executable; no
-   other changes to the program logic are necessary.
+   the program to show that you only need to replace the icons in the executable for
+   them to be used; no other changes to the program logic are necessary.
 2. **icons\** is a folder that contains .ico icons that will be used in the exercise.
 3. **compile.bat** is a batch file used to compile the above script. It creates two
    copies:
